@@ -46,6 +46,44 @@ export const HeroText = styled.div`
   }
 `
 
+export const BrandRow = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(5, 8, 22, 0.55);
+  border: 1px solid ${colors.line};
+  width: fit-content;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+
+  @media (max-width: 520px) {
+    padding: 0.3rem 0.75rem;
+  }
+`
+
+export const BrandMark = styled.img`
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+
+  @media (max-width: 520px) {
+    width: 38px;
+    height: 38px;
+  }
+`
+
+export const BrandText = styled.span`
+  color: ${colors.textSoft};
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+
+  @media (max-width: 520px) {
+    font-size: 0.9rem;
+  }
+`
+
 export const Kicker = styled.span`
   text-transform: uppercase;
   letter-spacing: 0.1em;

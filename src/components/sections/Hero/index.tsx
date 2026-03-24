@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { heroContent } from '../../../data/homeContent'
 import { placeholderBookCover } from '../../../assets/placeholders'
+import logoMain from '../../../assets/logo-1200x.png'
 import { PrimaryButton, GhostButton } from '../../common/Buttons'
 import {
   AccentBadge,
@@ -11,6 +12,9 @@ import {
   BookLabel,
   BookMock,
   BookImage,
+  BrandMark,
+  BrandRow,
+  BrandText,
   HeroContainer,
   HeroText,
   HeroWrapper,
@@ -30,6 +34,10 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
+              <BrandRow>
+                <BrandMark src={logoMain} alt="A Alma no Comando logo" />
+                <BrandText>A Alma no Comando</BrandText>
+              </BrandRow>
           <Kicker>{heroContent.kicker}</Kicker>
           <Title>{heroContent.title}</Title>
           <Subtitle>{heroContent.subtitle}</Subtitle>
@@ -42,7 +50,7 @@ const HeroSection = () => {
 
         <VisualPanel>
           <BookMock as={motion.div} initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
-            <BookImage src={placeholderBookCover} alt="Capa do livro A Alma no Comando (placeholder)" loading="lazy" />
+            <BookImage src={placeholderBookCover} alt="Capa do livro A Alma no Comando" loading="lazy" />
             <BookLabel>Obra autoral</BookLabel>
             <AccentBadge>
               <AccentTitle>Escuta profunda</AccentTitle>

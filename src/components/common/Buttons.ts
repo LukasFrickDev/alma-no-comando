@@ -16,6 +16,13 @@ export const PrimaryButton = styled.button`
   box-shadow: 0 18px 42px rgba(217, 180, 91, 0.25);
   transition: transform 180ms ease, box-shadow 180ms ease, filter 160ms ease;
 
+  @media (max-width: 520px) {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.98rem;
+    padding: 0.95rem 1.1rem;
+  }
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 22px 56px rgba(217, 180, 91, 0.35);
@@ -45,6 +52,13 @@ export const GhostButton = styled.button`
   color: ${colors.text};
   font-weight: 600;
   transition: color 160ms ease, border-color 160ms ease, transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+
+  @media (max-width: 520px) {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.96rem;
+    padding: 0.9rem 1rem;
+  }
 
   &:hover {
     color: ${colors.primary};

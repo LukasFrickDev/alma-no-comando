@@ -1,13 +1,19 @@
 import { navLinks } from '../../../data/homeContent'
-import { Wrapper, Container, BrandBlock, Brand, Domain, Nav, NavLink, Contact, Rights } from './styles'
+import logoMain from '../../../assets/logo-1200x.png'
+import { Wrapper, Container, BrandBlock, BrandRow, BrandLogo, Brand, Domain, Nav, NavLink, Contact, Rights } from './styles'
 
 const FooterSection = () => {
   return (
     <Wrapper>
       <Container>
         <BrandBlock>
-          <Brand>A Alma no Comando</Brand>
-          <Domain>aalmanocomando.com.br</Domain>
+          <BrandRow>
+            <BrandLogo src={logoMain} alt="A Alma no Comando" loading="lazy" />
+            <div>
+              <Brand>A Alma no Comando</Brand>
+              <Domain>aalmanocomando.com.br</Domain>
+            </div>
+          </BrandRow>
         </BrandBlock>
 
         <Nav aria-label="Navegação de rodapé">
