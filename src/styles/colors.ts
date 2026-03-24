@@ -1,0 +1,18 @@
+export const colors = {
+  background: '#050816',
+  backgroundSoft: '#0A1230',
+  backgroundSection: '#101B47',
+  surface: '#16265C',
+  surfaceAlt: '#1D2F73',
+  backgroundLight: '#F4EEDF',
+  backgroundLightAlt: '#EDE4CF',
+  primary: '#D9B45B',
+  primaryLight: '#E8C978',
+  primaryGlow: '#F6DE96',
+  text: '#F6EED8',
+  textSoft: '#D7CCAF',
+  textMuted: '#AEB7D1',
+  textDark: '#1A1D2B',
+  line: 'rgba(232, 201, 120, 0.25)',
+  overlay: 'rgba(5, 8, 22, 0.72)',
+}
