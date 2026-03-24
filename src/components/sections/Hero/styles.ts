@@ -1,13 +1,19 @@
 import styled from 'styled-components'
 import { colors } from '../../../styles/colors'
 import { breakpoints } from '../../../styles/breakpoints'
+import heroBackground from '../../../assets/background.png'
 
 export const HeroWrapper = styled.section`
   position: relative;
   padding: clamp(3.5rem, 7vw, 6.5rem) 0 clamp(3rem, 6vw, 5.5rem);
-  background: radial-gradient(circle at 20% 20%, rgba(217, 180, 91, 0.12), transparent 32%),
-    radial-gradient(circle at 80% 20%, rgba(232, 201, 120, 0.08), transparent 30%),
-    linear-gradient(140deg, ${colors.background} 0%, ${colors.backgroundSoft} 55%, ${colors.backgroundSection} 100%);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(217, 180, 91, 0.18), transparent 34%),
+    radial-gradient(circle at 82% 22%, rgba(232, 201, 120, 0.14), transparent 32%),
+    linear-gradient(140deg, rgba(5, 8, 22, 0.5) 0%, rgba(10, 18, 48, 0.12) 50%, rgba(16, 27, 71, 0.8) 100%),
+    url(${heroBackground});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: ${colors.text};
   overflow: hidden;
 `
