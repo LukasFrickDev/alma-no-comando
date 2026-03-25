@@ -5,7 +5,7 @@ import heroBackground from '../../../assets/background.png'
 
 export const HeroWrapper = styled.section`
   position: relative;
-  padding: clamp(3.5rem, 7vw, 6.5rem) 0 clamp(3rem, 6vw, 5.5rem);
+  padding: clamp(1rem, 4vw, 1rem) 0 clamp(1rem, 4vw, 1rem);
   background:
     radial-gradient(circle at 20% 20%, rgba(217, 180, 91, 0.18), transparent 34%),
     radial-gradient(circle at 82% 22%, rgba(232, 201, 120, 0.14), transparent 32%),
