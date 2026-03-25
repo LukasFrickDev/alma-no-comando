@@ -43,6 +43,10 @@ export const Title = styled.h2`
   font-size: clamp(2rem, 3.5vw, 2.6rem);
   line-height: 1.15;
   color: ${colors.text};
+
+  @media (max-width: 520px) {
+    padding-left: 0.5rem;
+  }
 `
 
 export const Paragraph = styled.p`
@@ -53,6 +57,7 @@ export const Paragraph = styled.p`
   @media (max-width: 520px) {
     font-size: 1rem;
     line-height: 1.65;
+    padding-left: 0.5rem;
   }
 `
 
@@ -60,6 +65,7 @@ export const Card = styled.div`
   background: rgba(15, 20, 44, 0.6);
   border: 1px solid ${colors.line};
   border-radius: 18px;
+margin-top: 4rem;
   padding: 1.8rem;
   box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
   display: grid;
@@ -68,6 +74,7 @@ export const Card = styled.div`
 
   @media (max-width: 520px) {
     padding: 1.4rem;
+    margin-top: 0;
   }
 `
 

@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 import { heroContent } from '../../../data/homeContent'
-import { placeholderBookCover } from '../../../assets/placeholders'
-import logoMain from '../../../assets/logo-1200x.png'
 import { PrimaryButton, GhostButton } from '../../common/Buttons'
 import {
   AccentBadge,
@@ -12,9 +10,7 @@ import {
   BookLabel,
   BookMock,
   BookImage,
-  BrandMark,
-  BrandRow,
-  BrandText,
+  ActionsMobile,
   HeroContainer,
   HeroText,
   HeroWrapper,
@@ -23,8 +19,16 @@ import {
   Title,
   VisualPanel,
 } from './styles'
-
+import bookCover from '../../../assets/capa-livro.png'
+    
 const HeroSection = () => {
+  const scrollToSection = (targetId: string) => {
+    const el = document.getElementById(targetId)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <HeroWrapper id="hero">
       <HeroContainer>
@@ -34,23 +38,23 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-              <BrandRow>
-                <BrandMark src={logoMain} alt="A Alma no Comando logo" />
-                <BrandText>A Alma no Comando</BrandText>
-              </BrandRow>
           <Kicker>{heroContent.kicker}</Kicker>
           <Title>{heroContent.title}</Title>
           <Subtitle>{heroContent.subtitle}</Subtitle>
           <Body>{heroContent.body}</Body>
           <Actions>
-            <PrimaryButton type="button">{heroContent.primaryCta}</PrimaryButton>
-            <GhostButton type="button">{heroContent.secondaryCta}</GhostButton>
+            <PrimaryButton type="button" onClick={() => scrollToSection('book')}>
+              {heroContent.primaryCta}
+            </PrimaryButton>
+            <GhostButton type="button" onClick={() => scrollToSection('method')}>
+              {heroContent.secondaryCta}
+            </GhostButton>
           </Actions>
         </HeroText>
 
         <VisualPanel>
           <BookMock as={motion.div} initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
-            <BookImage src={placeholderBookCover} alt="Capa do livro A Alma no Comando" loading="lazy" />
+            <BookImage src={bookCover} alt="Capa do livro A Alma no Comando" loading="lazy" />
             <BookLabel>Obra autoral</BookLabel>
             <AccentBadge>
               <AccentTitle>Escuta profunda</AccentTitle>
@@ -58,6 +62,15 @@ const HeroSection = () => {
             </AccentBadge>
           </BookMock>
         </VisualPanel>
+
+        <ActionsMobile>
+          <PrimaryButton type="button" onClick={() => scrollToSection('book')}>
+            {heroContent.primaryCta}
+          </PrimaryButton>
+          <GhostButton type="button" onClick={() => scrollToSection('method')}>
+            {heroContent.secondaryCta}
+          </GhostButton>
+        </ActionsMobile>
       </HeroContainer>
     </HeroWrapper>
   )

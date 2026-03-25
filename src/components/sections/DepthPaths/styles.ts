@@ -38,6 +38,10 @@ export const Title = styled.h2`
   font-size: clamp(2rem, 3.5vw, 2.4rem);
   color: ${colors.text};
   line-height: 1.15;
+
+  @media (max-width: 520px) {
+    padding-left: 0.55rem;
+  }
 `
 
 export const Paragraph = styled.p`
@@ -48,6 +52,7 @@ export const Paragraph = styled.p`
   @media (max-width: 520px) {
     font-size: 0.98rem;
     line-height: 1.6;
+    padding-left: 0.55rem;
   }
 `
 
@@ -89,12 +94,19 @@ export const Icon = styled.div`
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(217, 180, 91, 0.8), rgba(26, 29, 43, 0.95));
-  box-shadow: 0 10px 24px rgba(217, 180, 91, 0.28);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(217, 180, 91, 0.42);
+  box-shadow: 0 10px 24px rgba(217, 180, 91, 0.24);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: ${colors.primaryLight};
+  font-size: 1.4rem;
 
   @media (max-width: 520px) {
     width: 36px;
     height: 36px;
+    font-size: 1.2rem;
   }
 `
 
@@ -108,6 +120,11 @@ export const CardText = styled.p`
   color: ${colors.textSoft};
   margin: 0;
   line-height: 1.6;
+
+  strong {
+    color: ${colors.text};
+    font-weight: 700;
+  }
 
   @media (max-width: 520px) {
     line-height: 1.55;

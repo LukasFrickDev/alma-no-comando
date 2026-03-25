@@ -61,13 +61,48 @@ export const Paragraph = styled.p`
 `
 
 export const Actions = styled.div`
+  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
+  gap: 0.9rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-column: auto;
+  }
 
   @media (max-width: 520px) {
-    gap: 0.65rem;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  button,
+  a {
+    min-width: 230px;
+    padding: 1.08rem 1.8rem;
+    text-align: center;
+  }
+
+  .contact-cta {
+    color: ${colors.textDark};
+
+    &:hover {
+      color: ${colors.textDark};
+    }
+  }
+
+  .book-cta {
+    background: rgba(26, 29, 43, 0.06);
+    border-color: rgba(26, 29, 43, 0.12);
+    color: ${colors.textDark};
+
+    &:hover {
+      color: ${colors.primary};
+      border-color: ${colors.primary};
+      background: rgba(217, 180, 91, 0.12);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
   }
 `
 
@@ -107,6 +142,11 @@ export const HighlightText = styled.p`
   margin: 0;
   color: rgba(26, 29, 43, 0.82);
   line-height: 1.65;
+
+  strong {
+    color: ${colors.textDark};
+    font-weight: 700;
+  }
 
   @media (max-width: 520px) {
     line-height: 1.55;

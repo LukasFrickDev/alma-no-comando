@@ -24,7 +24,7 @@ const AuthorSection = () => {
             <PortraitRole>Autor e facilitador</PortraitRole>
           </div>
           <PortraitNote>
-            Mais de vinte anos trabalhando com indivíduos, grupos e organizações para traduzir crises em caminhos de amadurecimento, com uma abordagem que une rigor, simbolismo e humanidade.
+            <strong>Mais de vinte anos</strong> trabalhando com indivíduos, grupos e organizações para traduzir crises em caminhos de amadurecimento, com uma abordagem que une rigor, simbolismo e humanidade.
           </PortraitNote>
         </PortraitCard>
       </Container>

@@ -16,6 +16,12 @@ export const HeroWrapper = styled.section`
   background-repeat: no-repeat;
   color: ${colors.text};
   overflow: hidden;
+
+  @media (max-width: 520px) {
+    /* Mantém o glow dourado visível cobrindo toda a seção no mobile */
+    background-size: cover;
+    background-position: center top;
+  }
 `
 
 export const HeroContainer = styled.div`
@@ -43,44 +49,6 @@ export const HeroText = styled.div`
 
   @media (max-width: 520px) {
     gap: 1rem;
-  }
-`
-
-export const BrandRow = styled.div`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(5, 8, 22, 0.55);
-  border: 1px solid ${colors.line};
-  width: fit-content;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
-
-  @media (max-width: 520px) {
-    padding: 0.3rem 0.75rem;
-  }
-`
-
-export const BrandMark = styled.img`
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-
-  @media (max-width: 520px) {
-    width: 38px;
-    height: 38px;
-  }
-`
-
-export const BrandText = styled.span`
-  color: ${colors.textSoft};
-  letter-spacing: 0.06em;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-
-  @media (max-width: 520px) {
-    font-size: 0.9rem;
   }
 `
 
@@ -129,6 +97,19 @@ export const Actions = styled.div`
 
   @media (max-width: 520px) {
     gap: 0.7rem;
+    display: none;
+  }
+`
+
+export const ActionsMobile = styled.div`
+  display: none;
+
+  @media (max-width: 520px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    width: 100%;
+    justify-content: center;
   }
 `
 
@@ -145,31 +126,13 @@ export const VisualPanel = styled.div`
 
 export const BookMock = styled.div`
   position: relative;
-  width: min(360px, 85vw);
+  width: min(380px, 88vw);
   aspect-ratio: 2 / 3;
-  border-radius: 20px;
-  background: linear-gradient(160deg, ${colors.backgroundSection} 0%, ${colors.surface} 60%, ${colors.surfaceAlt} 100%);
-  border: 1px solid ${colors.line};
-  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.45), 0 0 60px rgba(217, 180, 91, 0.15);
+  border-radius: 18px;
+  background: transparent;
+  border: none;
+  box-shadow: 0 24px 78px rgba(0, 0, 0, 0.42), 0 0 48px rgba(217, 180, 91, 0.18);
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 10%;
-    border-radius: 14px;
-    background: radial-gradient(circle at 30% 30%, rgba(217, 180, 91, 0.32), transparent 50%),
-      linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
-    border: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 25%, transparent 75%, rgba(255, 255, 255, 0.08));
-    mix-blend-mode: screen;
-  }
 `
 
 export const BookImage = styled.img`
@@ -178,42 +141,49 @@ export const BookImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 18px;
   z-index: 1;
 `
 
 export const BookLabel = styled.div`
   position: absolute;
-  top: 1.25rem;
+  top: 0.8rem;
   left: -0.75rem;
-  padding: 0.35rem 0.9rem;
+  padding: 0.4rem 1rem;
   background: ${colors.primary};
-  color: ${colors.textDark};
-  border-radius: 999px;
+  color: rgba(8, 12, 26, 0.85);
+  border-radius: 0px 20px 20px 0px;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  box-shadow: 0 10px 24px rgba(217, 180, 91, 0.35);
+  letter-spacing: 0.04em;
+  border: 1px solid ${colors.backgroundSoft};
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+  z-index: 2;
 `
 
 export const AccentBadge = styled.div`
   position: absolute;
   bottom: 1.5rem;
   right: -0.5rem;
-  padding: 0.8rem 1rem;
-  background: rgba(10, 18, 48, 0.8);
-  border: 1px solid ${colors.line};
-  border-radius: 16px;
+  padding: 0.85rem 1.05rem;
+  background: rgba(8, 12, 26, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-right: 12px solid rgba(217, 180, 91, 0.9);
+  border-radius: 16px 0px 0px 16px;
   color: ${colors.text};
-  width: 220px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
+  width: 240px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(10px);
+  z-index: 2;
 
   @media (max-width: 520px) {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    width: 100%;
-    margin-top: 1rem;
+    position: absolute;
+    right: 0.35rem;
+    bottom: 0.75rem;
+    width: 78%;
+    max-width: 220px;
+    padding: 0.75rem 0.95rem;
+    border-radius: 14px;
+    border-right: 2px solid rgba(217, 180, 91, 0.85);
   }
 `
 

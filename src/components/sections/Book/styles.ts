@@ -30,6 +30,11 @@ export const Header = styled.div`
   display: grid;
   gap: 0.65rem;
   max-width: 720px;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    order: 2;
+    justify-self: start;
+  }
 `
 
 export const Kicker = styled.span`
@@ -44,16 +49,29 @@ export const Title = styled.h2`
   font-size: clamp(2rem, 3.6vw, 2.5rem);
   line-height: 1.12;
   color: ${colors.textDark};
+
+  @media (max-width: 520px) {
+    padding-left: 0.6rem;
+  }
 `
 
 export const Paragraph = styled.p`
   color: rgba(26, 29, 43, 0.9);
   line-height: 1.75;
   font-size: 1.03rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 520px) {
     font-size: 1rem;
     line-height: 1.65;
+    padding-left: 0.6rem;
+  }
+`
+
+export const DesktopCta = styled.div`
+    margin: 0 auto;
+  @media (max-width: 520px) {
+    display: none;
   }
 `
 
@@ -63,33 +81,19 @@ export const Visual = styled.div`
   width: min(400px, 88vw);
   aspect-ratio: 2 / 3;
   border-radius: 22px;
-  background: linear-gradient(150deg, ${colors.surface} 0%, ${colors.surfaceAlt} 70%);
-  border: 1px solid ${colors.line};
-  box-shadow: 0 26px 86px rgba(0, 0, 0, 0.35), 0 0 70px rgba(217, 180, 91, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid ${colors.primary};
+  box-shadow: 0 18px 56px rgba(0, 0, 0, 0.28), 0 0 48px rgba(217, 180, 91, 0.12);
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 12%;
-    border-radius: 16px;
-    background: radial-gradient(circle at 30% 30%, rgba(217, 180, 91, 0.32), transparent 55%),
-      radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.08), transparent 55%),
-      linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0));
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 30%, transparent 70%, rgba(255, 255, 255, 0.1));
-    mix-blend-mode: screen;
-  }
 
   @media (max-width: 520px) {
     justify-self: center;
     width: min(340px, 88vw);
+  }
+  
+  @media (min-width: ${breakpoints.tablet}) {
+    justify-self: start;
+    order: 1;
   }
 `
 
@@ -113,18 +117,139 @@ export const VisualBadge = styled.div`
   border-radius: 14px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  box-shadow: 0 12px 28px rgba(217, 180, 91, 0.35);
+  box-shadow: 0 12px 38px rgba(217, 180, 91, 0.35);
+  z-index: 2;
 `
 
-export const VisualNote = styled.div`
-  position: absolute;
-  bottom: 1.5rem;
-  left: -0.6rem;
-  padding: 0.85rem 1.15rem;
-  background: rgba(244, 238, 223, 0.9);
+export const MobileCta = styled.div`
+  display: none;
+
+  @media (max-width: 520px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.4rem;
+
+    button {
+      width: min(420px, 100%);
+    }
+  }
+`
+
+
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 10, 22, 0.7);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  z-index: 50;
+`
+
+export const ModalContent = styled.div`
+  position: relative;
+  width: min(820px, 100%);
+  background: linear-gradient(165deg, rgba(20, 24, 42, 0.98), rgba(14, 17, 32, 0.96));
+  border: 1px solid rgba(217, 180, 91, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45), 0 0 80px rgba(217, 180, 91, 0.2);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  overflow: hidden;
+`
+
+export const ModalGrid = styled.div`
+  display: grid;
+  gap: 1.4rem;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 1.8rem;
+    align-items: center;
+  }
+`
+
+export const ModalImageWrapper = styled.div`
+  background: ${colors.primary};
+  border-radius: 16px;
+  padding: 0.1rem;
+
+`
+
+export const ModalImage = styled.img`
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+
+`
+
+export const ModalBody = styled.div`
+  display: grid;
+  gap: 0.85rem;
+  color: ${colors.text};
+`
+
+export const ModalTitle = styled.h3`
+  margin: 0;
+  font-size: clamp(1.4rem, 2.2vw, 1.65rem);
+  color: ${colors.primaryLight};
+`
+
+export const ModalText = styled.p`
+  margin: 0;
+  line-height: 1.65;
+  color: ${colors.textMuted};
+`
+
+export const ModalPrice = styled.div`
+  font-weight: 700;
+  color: ${colors.text};
+  font-size: 1.08rem;
+  margin-bottom: 2.5rem;
+
+  @media (max-width: 520px) {
+    margin-bottom: 0;
+  }
+`
+
+export const ModalAction = styled.button`
+  align-self: start;
+  border: none;
+  cursor: pointer;
+  padding: 0.95rem 1.3rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, ${colors.primary}, ${colors.primaryLight});
   color: ${colors.textDark};
-  border-radius: 14px;
-  border: 1px solid rgba(26, 29, 43, 0.1);
-  box-shadow: 0 12px 30px rgba(10, 18, 48, 0.12);
-  width: 240px;
+  font-weight: 700;
+  box-shadow: 0 14px 36px rgba(217, 180, 91, 0.35);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 42px rgba(217, 180, 91, 0.4);
+  }
+`
+
+export const ModalCloseButton = styled.button`
+  position: absolute;
+  top: 0.75rem;
+  right: 0.8rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: ${colors.text};
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  transition: background 120ms ease, transform 120ms ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+  }
 `
