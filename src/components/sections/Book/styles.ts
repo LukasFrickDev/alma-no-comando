@@ -143,9 +143,12 @@ export const ModalOverlay = styled.div`
   inset: 0;
   background: rgba(7, 10, 22, 0.7);
   backdrop-filter: blur(6px);
-  display: grid;
-  place-items: center;
-  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 0.9rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   z-index: 50;
 `
 
@@ -157,7 +160,14 @@ export const ModalContent = styled.div`
   border-radius: 20px;
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45), 0 0 80px rgba(217, 180, 91, 0.2);
   padding: clamp(1.4rem, 3vw, 2rem);
-  overflow: hidden;
+  margin: 1rem 0;
+  max-height: calc(100vh - 2.5rem);
+  overflow: auto;
+
+  @media (max-width: 520px) {
+    padding: 1.45rem 1.05rem 1.15rem;
+    border-radius: 16px;
+  }
 `
 
 export const ModalGrid = styled.div`
@@ -175,6 +185,11 @@ export const ModalImageWrapper = styled.div`
   background: ${colors.primary};
   border-radius: 16px;
   padding: 0.1rem;
+  max-width: 380px;
+
+  @media (max-width: 520px) {
+    margin: 0 auto;
+  }
 
 `
 
@@ -189,6 +204,10 @@ export const ModalBody = styled.div`
   display: grid;
   gap: 0.85rem;
   color: ${colors.text};
+
+  @media (max-width: 520px) {
+    gap: 0.75rem;
+  }
 `
 
 export const ModalTitle = styled.h3`
@@ -234,10 +253,10 @@ export const ModalAction = styled.button`
 
 export const ModalCloseButton = styled.button`
   position: absolute;
-  top: 0.75rem;
-  right: 0.8rem;
+  top: 0.5rem;
+  right: 0.6rem;
   border: none;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(8, 12, 26, 0.55);
   color: ${colors.text};
   width: 36px;
   height: 36px;
@@ -247,6 +266,12 @@ export const ModalCloseButton = styled.button`
   place-items: center;
   font-size: 1.2rem;
   transition: background 120ms ease, transform 120ms ease;
+  z-index: 2;
+
+  @media (max-width: 520px) {
+    top: 0.35rem;
+    right: 0.45rem;
+  }
 
   &:hover {
     background: rgba(255, 255, 255, 0.12);

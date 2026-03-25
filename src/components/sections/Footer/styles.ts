@@ -111,7 +111,7 @@ export const BrandQuickLink = styled.a`
 export const NavArea = styled.nav`
   grid-area: nav;
   display: grid;
-  gap: 0.9rem;
+  gap: 0.65rem;
   align-content: start;
 `
 
@@ -126,16 +126,17 @@ export const NavTitle = styled.span`
 export const NavGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 0.5rem;
+  column-gap: 0.25rem;
+  row-gap: 0.2rem;
 
   @media (max-width: 520px) {
-    gap: 0.35rem;
+    gap: 0.24rem;
   }
 `
 
 export const NavColumn = styled.div`
   display: grid;
-  gap: 0.35rem;
+  gap: 0.25rem;
 `
 
 export const NavLink = styled.a`

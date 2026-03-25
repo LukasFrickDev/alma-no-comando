@@ -49,6 +49,5 @@ const ProblemSection = () => {
     </Wrapper>
   )
 }
-            <VisualBadge>Editorial</VisualBadge>
 
 export default ProblemSection

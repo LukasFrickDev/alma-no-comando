@@ -20,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
   html {
     scroll-behavior: smooth;
     background-color: ${colors.background};
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
   }
 
   body {
@@ -80,21 +82,27 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-track {
-    background: ${colors.backgroundSoft};
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${colors.surface};
+    background: rgba(255, 255, 255, 0.16);
     border-radius: 999px;
-    border: 2px solid ${colors.backgroundSoft};
+    border: 2px solid transparent;
+    transition: background 120ms ease;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: ${colors.surfaceAlt};
+    background: rgba(255, 255, 255, 0.38);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(255, 255, 255, 0.52);
   }
 `
 

@@ -116,8 +116,13 @@ export const Visual = styled.div`
   }
 
   @media (max-width: 520px) {
-    padding: 1.5rem 1.35rem 1.45rem;
+    padding: 1.6rem 1.35rem 1.45rem 1.95rem;
     border-radius: 22px;
+
+    &::before {
+      left: 0.85rem;
+      height: 80%;
+    }
   }
 `
 

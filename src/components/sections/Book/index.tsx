@@ -48,6 +48,18 @@ const BookSection = () => {
     return () => window.removeEventListener('openBookModal', handleExternalOpen)
   }, [])
 
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow
+
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden'
+    }
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [isModalOpen])
+
   return (
     <Wrapper id={bookSection.id}>
       <Container>

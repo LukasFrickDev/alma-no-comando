@@ -21,6 +21,7 @@ export const HeroWrapper = styled.section`
     /* Mantém o glow dourado visível cobrindo toda a seção no mobile */
     background-size: cover;
     background-position: center top;
+      padding: clamp(3.5rem, 7vw, 6.5rem) 0 clamp(3rem, 6vw, 5.5rem);
   }
 `
 
@@ -57,6 +58,10 @@ export const Kicker = styled.span`
   letter-spacing: 0.1em;
   font-size: 0.9rem;
   color: ${colors.primaryLight};
+    @media (max-width: 520px) {
+    line-height: 1.1;
+    text-align: center;
+  }
 `
 
 export const Title = styled.h1`
@@ -65,7 +70,9 @@ export const Title = styled.h1`
   color: ${colors.text};
 
   @media (max-width: 520px) {
+  font-size: clamp(3.0rem, 6vw, 4.0rem);
     line-height: 1.1;
+    text-align: center;
   }
 `
 
@@ -76,17 +83,19 @@ export const Subtitle = styled.p`
 
    @media (max-width: 520px) {
     font-size: 1.05rem;
+    text-align: center;
   }
 `
 
 export const Body = styled.p`
-  color: ${colors.textMuted};
+  color: ${colors.text};
   line-height: 1.7;
   max-width: 720px;
 
   @media (max-width: 520px) {
     font-size: 0.98rem;
     line-height: 1.65;
+    text-align: center;
   }
 `
 
