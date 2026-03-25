@@ -70,7 +70,7 @@ export const Title = styled.h1`
   color: ${colors.text};
 
   @media (max-width: 520px) {
-  font-size: clamp(3.0rem, 6vw, 4.0rem);
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
     line-height: 1.1;
     text-align: center;
   }
