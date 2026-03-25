@@ -12,7 +12,6 @@ import {
   VisualHeader,
   VisualTitle,
   VisualText,
-  VisualBadge,
 
   AccentBar,
   VisualFooter,
