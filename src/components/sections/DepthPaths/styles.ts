@@ -59,13 +59,18 @@ export const Paragraph = styled.p`
 export const Grid = styled.div`
   display: grid;
   gap: 1rem;
-
-  @media (min-width: ${breakpoints.tablet}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
   @media (max-width: 520px) {
     gap: 0.85rem;
+  }
+
+  @media (min-width: ${breakpoints.tablet}) {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
   }
 `
 
@@ -128,5 +133,19 @@ export const CardText = styled.p`
 
   @media (max-width: 520px) {
     line-height: 1.55;
+  }
+`
+
+export const Actions = styled.div`
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 520px) {
+    padding: 0 0.25rem;
+
+    a {
+      width: 100%;
+    }
   }
 `

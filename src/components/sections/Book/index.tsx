@@ -35,8 +35,8 @@ const BookSection = () => {
   const modalInfo = {
     title: 'A Alma no Comando',
     summary: bookSection.paragraphs[0],
-    price: 'R$ 89,00',
-    actionLabel: 'Ir para pagamento',
+    price: 'R$ 54,00',
+    actionLabel: 'Comprar agora',
   }
 
   const handleOpenModal = () => setIsModalOpen(true)

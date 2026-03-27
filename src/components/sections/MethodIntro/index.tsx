@@ -1,8 +1,16 @@
 import { motion } from 'framer-motion'
 import { methodIntro } from '../../../data/homeContent'
-import { Wrapper, Container, Header, Kicker, Title, Paragraph, Card, CardTitle, CardText, AccentLine } from './styles'
+import { PrimaryButton } from '../../common/Buttons'
+import { Wrapper, Container, Header, Kicker, Title, Paragraph, Card, CardTitle, CardText, AccentLine, CtaWrapperDesktop } from './styles'
 
 const MethodIntroSection = () => {
+  const handleScrollToPaths = () => {
+    const target = document.getElementById('paths')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <Wrapper id={methodIntro.id}>
       <Container>
@@ -25,6 +33,11 @@ const MethodIntroSection = () => {
           </CardText>
         </Card>
       </Container>
+          <CtaWrapperDesktop>
+            <PrimaryButton type="button" onClick={handleScrollToPaths}>
+              Quero conhecer o método
+            </PrimaryButton>
+          </CtaWrapperDesktop>
     </Wrapper>
   )
 }

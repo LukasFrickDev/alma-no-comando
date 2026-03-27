@@ -118,3 +118,34 @@ export const PillarText = styled.p`
     font-size: 1rem;
   }
 `
+
+export const CtaWrapper = styled.div`
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+
+  @media (max-width: 520px) {
+    padding: 0 0.2rem;
+    gap: 0;
+  }
+`
+
+export const DesktopCta = styled.div`
+  @media (max-width: 520px) {
+    display: none;
+  }
+`
+
+export const MobileCta = styled.div`
+  display: none;
+
+  @media (max-width: 520px) {
+    display: flex;
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
+`

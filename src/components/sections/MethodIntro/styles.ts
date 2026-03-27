@@ -10,7 +10,7 @@ export const Wrapper = styled.section`
 
 export const Container = styled.div`
   max-width: 1180px;
-  margin: 0 auto;
+  margin: 0 auto 5rem auto;
   padding: 0 1.25rem;
   display: grid;
   gap: 2rem;
@@ -22,6 +22,7 @@ export const Container = styled.div`
 
   @media (max-width: 520px) {
     gap: 1.6rem;
+    margin: 0 auto;
   }
 `
 
@@ -60,6 +61,20 @@ export const Paragraph = styled.p`
     padding-left: 0.5rem;
   }
 `
+
+export const CtaWrapperDesktop = styled.div`
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 520px) {
+    margin: 2rem auto 0 auto;
+    width: 90%;
+    padding: 0 0.2rem;
+   
+  }
+`
+
 
 export const Card = styled.div`
   background: rgba(15, 20, 44, 0.6);

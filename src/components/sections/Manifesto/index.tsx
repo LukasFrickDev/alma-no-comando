@@ -34,7 +34,7 @@ const ManifestoSection = () => {
             Entrar em contato
           </PrimaryButton>
           <GhostButton className="book-cta" type="button" onClick={openBookModal}>
-            Adquirir o livro
+            Quero o livro
           </GhostButton>
         </Actions>
       </Container>

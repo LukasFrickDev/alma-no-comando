@@ -235,19 +235,52 @@ export const ModalPrice = styled.div`
 
 export const ModalAction = styled.button`
   align-self: start;
-  border: none;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   cursor: pointer;
   padding: 0.95rem 1.3rem;
   border-radius: 999px;
-  background: linear-gradient(120deg, ${colors.primary}, ${colors.primaryLight});
+  background: linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryLight} 55%, ${colors.primary} 100%);
   color: ${colors.textDark};
   font-weight: 700;
-  box-shadow: 0 14px 36px rgba(217, 180, 91, 0.35);
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  box-shadow:
+    0 16px 32px rgba(217, 180, 91, 0.28),
+    0 10px 22px rgba(0, 0, 0, 0.22);
+  transition: transform 150ms ease, box-shadow 180ms ease, filter 160ms ease;
+  overflow: hidden;
+  isolation: isolate;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 38%, rgba(255, 255, 255, 0) 62%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    pointer-events: none;
+  }
 
   &:hover {
     transform: translateY(-1px);
-    box-shadow: 0 16px 42px rgba(217, 180, 91, 0.4);
+    box-shadow:
+      0 20px 42px rgba(217, 180, 91, 0.34),
+      0 12px 26px rgba(0, 0, 0, 0.24);
+  }
+
+  &:active {
+    transform: translateY(0);
+    filter: brightness(0.97);
+    box-shadow:
+      inset 0 2px 6px rgba(0, 0, 0, 0.1),
+      0 12px 22px rgba(217, 180, 91, 0.2);
   }
 `
 

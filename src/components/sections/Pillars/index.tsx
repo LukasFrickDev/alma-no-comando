@@ -1,9 +1,17 @@
 import { motion } from 'framer-motion'
 import { pillars } from '../../../data/homeContent'
-import { Wrapper, Container, Header, Kicker, Title, Grid, Card, PillarTitle, PillarText } from './styles'
+import { PrimaryButton } from '../../common/Buttons'
+import { Wrapper, Container, Header, Kicker, Title, Grid, Card, PillarTitle, PillarText, CtaWrapper, DesktopCta, MobileCta } from './styles'
 import type { JSX } from 'react'
 
 const PillarsSection = () => {
+  const handleScrollToPaths = () => {
+    const target = document.getElementById('paths')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   const pillarDescriptions: Record<string, JSX.Element> = {
     'A vida como símbolo': (
       <>
@@ -51,6 +59,19 @@ const PillarsSection = () => {
             </Card>
           ))}
         </Grid>
+
+        <CtaWrapper>
+          <DesktopCta>
+            <PrimaryButton type="button" onClick={handleScrollToPaths}>
+              Conhecer caminhos de aprofundamento
+            </PrimaryButton>
+          </DesktopCta>
+          <MobileCta>
+            <PrimaryButton type="button" onClick={handleScrollToPaths}>
+              Conhecer caminhos
+            </PrimaryButton>
+          </MobileCta>
+        </CtaWrapper>
       </Container>
     </Wrapper>
   )

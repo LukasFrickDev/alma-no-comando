@@ -4,7 +4,7 @@ export const heroContent = {
   subtitle: 'Escutando a vida e sentindo as direções da alma.',
   body:
     'Um convite à reflexão, ao amadurecimento interior e à escuta profunda daquilo que a vida está tentando revelar em meio aos excessos, conflitos e transições do nosso tempo.',
-  primaryCta: 'Conheça o Livro',
+  primaryCta: 'Conheça a Obra',
   secondaryCta: 'Conheça o Método',
 }
 
@@ -38,14 +38,14 @@ export const pillars = [
       'Crises, tensões e desconfortos podem carregar mensagens importantes sobre aquilo que precisa ser revisto, integrado ou transformado.',
   },
   {
-    title: 'A individuação como caminho',
-    description:
-      'O amadurecimento humano exige escuta, consciência e coragem para se aproximar daquilo que é mais verdadeiro em si mesmo.',
-  },
-  {
     title: 'A escuta como prática',
     description:
       'Permitir que a alma volte a ocupar seu lugar de orientação exige presença, percepção e abertura para o sentido mais profundo da experiência.',
+  },
+  {
+    title: 'A individuação como caminho',
+    description:
+      'O amadurecimento humano exige escuta, consciência e coragem para se aproximar daquilo que é mais verdadeiro em si mesmo.',
   },
 ]
 
@@ -54,6 +54,11 @@ export const depthPaths = [
     title: 'Mentoria',
     description:
       'Acompanhamento mais próximo para processos de discernimento, amadurecimento e reposicionamento interior.',
+  },
+  {
+    title: 'Clínica (terapia)',
+    description:
+      'Atendimento clínico individual com foco em escuta, ampliação de consciência e integração simbólica do que pede passagem.',
   },
   {
     title: 'Vivências',
@@ -67,6 +72,12 @@ export const depthPaths = [
   },
 ]
 
+export const depthPathsCta = {
+  label: 'Quero saber mais sobre os serviços',
+  whatsappNumber: '5511974753581',
+  whatsappMessage: 'Olá! Quero saber mais sobre os caminhos de aprofundamento.',
+}
+
 export const bookSection = {
   id: 'book',
   title: 'O livro',
@@ -74,7 +85,7 @@ export const bookSection = {
     'Ao percorrer temas como trabalho, relacionamentos, saúde emocional, família, dinheiro, lazer e espiritualidade, o livro propõe um olhar simbólico sobre a vida, mostrando que muitos dos desequilíbrios que enfrentamos carregam mensagens importantes sobre quem estamos nos tornando.',
     'Mais do que um manual de respostas, A Alma no Comando é um convite à reflexão. Um chamado para desenvolver uma escuta mais profunda da própria vida e reconhecer que o verdadeiro caminho de amadurecimento começa quando aprendemos a permitir que a alma volte a ocupar seu lugar de orientação.',
   ],
-  cta: 'Saiba mais sobre o livro',
+  cta: 'Quero o Livro',
 }
 
 export const authorSection = {

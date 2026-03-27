@@ -1,12 +1,14 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import { TbCompass, TbLayersIntersect, TbPresentationAnalytics } from 'react-icons/tb'
-import { depthPaths } from '../../../data/homeContent'
-import { Wrapper, Container, Header, Kicker, Title, Paragraph, Grid, Card, CardTitle, CardText, Icon } from './styles'
+import { TbCompass, TbHeartbeat, TbLayersIntersect, TbPresentationAnalytics } from 'react-icons/tb'
+import { depthPaths, depthPathsCta } from '../../../data/homeContent'
+import { PrimaryButton } from '../../common/Buttons'
+import { Wrapper, Container, Header, Kicker, Title, Paragraph, Grid, Card, CardTitle, CardText, Icon, Actions } from './styles'
 
 const DepthPathsSection = () => {
   const iconMap: Record<string, ReactNode> = {
     Mentoria: <TbCompass />,
+    'Clínica (terapia)': <TbHeartbeat />,
     'Vivências': <TbLayersIntersect />,
     'Palestras e Programas': <TbPresentationAnalytics />,
   }
@@ -15,6 +17,11 @@ const DepthPathsSection = () => {
     Mentoria: (
       <>
         Acompanhamento mais próximo para processos de discernimento, amadurecimento e <strong>reposicionamento interior</strong>.
+      </>
+    ),
+    'Clínica (terapia)': (
+      <>
+        Sessões individuais para aprofundar a <strong>escuta clínica</strong>, integrar mensagens da psique e sustentar movimentos de transformação.
       </>
     ),
     'Vivências': (
@@ -49,6 +56,12 @@ const DepthPathsSection = () => {
             </Card>
           ))}
         </Grid>
+
+        <Actions>
+          <PrimaryButton as="a" href={`https://wa.me/${depthPathsCta.whatsappNumber}?text=${encodeURIComponent(depthPathsCta.whatsappMessage)}`} target="_blank" rel="noreferrer">
+            {depthPathsCta.label}
+          </PrimaryButton>
+        </Actions>
       </Container>
     </Wrapper>
   )
