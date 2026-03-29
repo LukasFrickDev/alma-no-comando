@@ -1,6 +1,6 @@
-import { navLinks } from '../../../data/homeContent'
+import { buildWhatsappUrl, contactInfo, navLinks } from '../../../data/homeContent'
 import logoMain from '../../../assets/logo-1200x.png'
-import { TbBrandInstagram, TbMail, TbPhone } from 'react-icons/tb'
+import { TbBrandInstagram, TbBrandWhatsapp, TbMail } from 'react-icons/tb'
 import {
   Wrapper,
   Container,
@@ -27,15 +27,18 @@ import {
 } from './styles'
 
 const FooterSection = () => {
+  const whatsappUrl = buildWhatsappUrl(contactInfo.whatsappDefaultMessage)
+
   const contactItems = [
-    { label: 'contato@aalmanocomando.com.br', href: 'mailto:contato@aalmanocomando.com.br', icon: <TbMail /> },
-    { label: '+55 11 97475-3581', href: 'tel:+5511974753581', icon: <TbPhone /> },
-    { label: '@aalmanocomando', href: 'https://www.instagram.com/aalmanocomando', icon: <TbBrandInstagram /> },
+    { label: contactInfo.email, href: `mailto:${contactInfo.email}`, icon: <TbMail /> },
+    { label: contactInfo.whatsappDisplay, href: whatsappUrl, icon: <TbBrandWhatsapp /> },
+    { label: contactInfo.instagramHandle, href: contactInfo.instagramUrl, icon: <TbBrandInstagram /> },
   ]
 
   const quickLinks = [
-    { label: 'Instagram', href: 'https://www.instagram.com/aalmanocomando', icon: <TbBrandInstagram /> },
-    { label: 'E-mail', href: 'mailto:contato@aalmanocomando.com.br', icon: <TbMail /> },
+    { label: 'Instagram', href: contactInfo.instagramUrl, icon: <TbBrandInstagram /> },
+    { label: 'WhatsApp', href: whatsappUrl, icon: <TbBrandWhatsapp /> },
+    { label: 'E-mail', href: `mailto:${contactInfo.email}`, icon: <TbMail /> },
   ]
 
   const navChunks = [navLinks.slice(0, 4), navLinks.slice(4, 8)]

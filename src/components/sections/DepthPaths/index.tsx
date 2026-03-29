@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { TbCompass, TbHeartbeat, TbLayersIntersect, TbPresentationAnalytics } from 'react-icons/tb'
-import { depthPaths, depthPathsCta } from '../../../data/homeContent'
+import { buildWhatsappUrl, depthPaths, depthPathsCta } from '../../../data/homeContent'
 import { PrimaryButton } from '../../common/Buttons'
 import { Wrapper, Container, Header, Kicker, Title, Paragraph, Grid, Card, CardTitle, CardText, Icon, Actions } from './styles'
 
@@ -16,7 +16,7 @@ const DepthPathsSection = () => {
   const descriptions: Record<string, ReactNode> = {
     Mentoria: (
       <>
-        Acompanhamento mais próximo para processos de discernimento, amadurecimento e <strong>reposicionamento interior</strong>.
+        Acompanhamento para desenvolvimento de clareza, responsabilidade e direção nas <strong>escolhas pessoais e profissionais</strong>.
       </>
     ),
     'Clínica (terapia)': (
@@ -58,7 +58,7 @@ const DepthPathsSection = () => {
         </Grid>
 
         <Actions>
-          <PrimaryButton as="a" href={`https://wa.me/${depthPathsCta.whatsappNumber}?text=${encodeURIComponent(depthPathsCta.whatsappMessage)}`} target="_blank" rel="noreferrer">
+          <PrimaryButton as="a" href={buildWhatsappUrl(depthPathsCta.whatsappMessage)} target="_blank" rel="noreferrer">
             {depthPathsCta.label}
           </PrimaryButton>
         </Actions>

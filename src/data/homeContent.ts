@@ -8,6 +8,20 @@ export const heroContent = {
   secondaryCta: 'Conheça o Método',
 }
 
+export const contactInfo = {
+  email: 'contato@aalmanocomando.com.br',
+  instagramUrl: 'https://www.instagram.com/aalmanocomando',
+  instagramHandle: '@aalmanocomando',
+  whatsappNumber: '5511974753581',
+  whatsappDisplay: '+55 11 97475-3581',
+  whatsappDefaultMessage: 'Olá! Quero falar sobre A Alma no Comando.',
+  whatsappBookMessage: 'Olá! Quero comprar o livro A Alma no Comando.',
+  whatsappDepthPathsMessage: 'Olá! Quero saber mais sobre os caminhos de aprofundamento.',
+  whatsappManifestoMessage: 'Olá, quero saber mais sobre os formatos e próximos passos.',
+}
+
+export const buildWhatsappUrl = (message: string) => `https://wa.me/${contactInfo.whatsappNumber}?text=${encodeURIComponent(message)}`
+
 export const problemSection = {
   id: 'problem',
   title: 'O problema do mundo atual',
@@ -53,7 +67,7 @@ export const depthPaths = [
   {
     title: 'Mentoria',
     description:
-      'Acompanhamento mais próximo para processos de discernimento, amadurecimento e reposicionamento interior.',
+      'Acompanhamento para desenvolvimento de clareza, responsabilidade e direção nas escolhas pessoais e profissionais.',
   },
   {
     title: 'Clínica (terapia)',
@@ -74,8 +88,7 @@ export const depthPaths = [
 
 export const depthPathsCta = {
   label: 'Quero saber mais sobre os serviços',
-  whatsappNumber: '5511974753581',
-  whatsappMessage: 'Olá! Quero saber mais sobre os caminhos de aprofundamento.',
+  whatsappMessage: contactInfo.whatsappDepthPathsMessage,
 }
 
 export const bookSection = {

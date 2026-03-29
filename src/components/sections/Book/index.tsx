@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { bookSection } from '../../../data/homeContent'
+import { bookSection, buildWhatsappUrl, contactInfo } from '../../../data/homeContent'
 import { placeholderBookCover } from '../../../assets/placeholders'
 import { PrimaryButton } from '../../common/Buttons'
 import {
@@ -25,7 +25,6 @@ import {
   ModalTitle,
   ModalText,
   ModalPrice,
-  ModalAction,
   ModalCloseButton,
 } from './styles'
 
@@ -35,9 +34,11 @@ const BookSection = () => {
   const modalInfo = {
     title: 'A Alma no Comando',
     summary: bookSection.paragraphs[0],
-    price: 'R$ 54,00',
+    price: 'R$ 54,90',
     actionLabel: 'Comprar agora',
   }
+
+  const whatsappUrl = buildWhatsappUrl(contactInfo.whatsappBookMessage)
 
   const handleOpenModal = () => setIsModalOpen(true)
   const handleCloseModal = () => setIsModalOpen(false)
@@ -103,7 +104,9 @@ const BookSection = () => {
                 <ModalTitle id="book-modal-title">{modalInfo.title}</ModalTitle>
                 <ModalText>{modalInfo.summary}</ModalText>
                 <ModalPrice>{modalInfo.price}</ModalPrice>
-                <ModalAction type="button">{modalInfo.actionLabel}</ModalAction>
+                <PrimaryButton as="a" href={whatsappUrl} target="_blank" rel="noreferrer">
+                  {modalInfo.actionLabel}
+                </PrimaryButton>
               </ModalBody>
             </ModalGrid>
           </ModalContent>

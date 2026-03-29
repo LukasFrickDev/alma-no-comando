@@ -1,12 +1,10 @@
 import { motion } from 'framer-motion'
-import { manifestoSection } from '../../../data/homeContent'
+import { buildWhatsappUrl, contactInfo, manifestoSection } from '../../../data/homeContent'
 import { PrimaryButton, GhostButton } from '../../common/Buttons'
 import { Wrapper, Container, Header, Kicker, Title, Paragraph, Actions, HighlightCard, HighlightTitle, HighlightText } from './styles'
 
 const ManifestoSection = () => {
-  const whatsappNumber = '5511974753581'
-  const whatsappMessage = 'Olá, quero saber mais sobre os formatos e próximos passos.'
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+  const whatsappUrl = buildWhatsappUrl(contactInfo.whatsappManifestoMessage)
 
   const openBookModal = () => {
     window.dispatchEvent(new Event('openBookModal'))
