@@ -98,7 +98,13 @@ export const bookSection = {
     'Ao percorrer temas como trabalho, relacionamentos, saúde emocional, família, dinheiro, lazer e espiritualidade, o livro propõe um olhar simbólico sobre a vida, mostrando que muitos dos desequilíbrios que enfrentamos carregam mensagens importantes sobre quem estamos nos tornando.',
     'Mais do que um manual de respostas, A Alma no Comando é um convite à reflexão. Um chamado para desenvolver uma escuta mais profunda da própria vida e reconhecer que o verdadeiro caminho de amadurecimento começa quando aprendemos a permitir que a alma volte a ocupar seu lugar de orientação.',
   ],
-  cta: 'Quero o Livro',
+  cta: 'QUERO COMPRAR O LIVRO',
+}
+
+// Replace these placeholder URLs with the purchase links for each format.
+export const bookPurchaseLinks = {
+  physical: 'https://www.amazon.com.br/dp/6562560012',
+  digital: 'https://www.amazon.com.br/dp/B0HQPK21SJ',
 }
 
 export const authorSection = {

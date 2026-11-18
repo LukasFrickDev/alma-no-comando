@@ -177,7 +177,7 @@ export const ModalGrid = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
     grid-template-columns: 0.9fr 1.1fr;
     gap: 1.8rem;
-    align-items: center;
+    align-items: end;
   }
 `
 
@@ -188,6 +188,7 @@ export const ModalImageWrapper = styled.div`
   max-width: 380px;
 
   @media (max-width: 520px) {
+    order: 2;
     margin: 0 auto;
   }
 
@@ -201,7 +202,9 @@ export const ModalImage = styled.img`
 `
 
 export const ModalBody = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
   gap: 0.85rem;
   color: ${colors.text};
 
@@ -210,27 +213,24 @@ export const ModalBody = styled.div`
   }
 `
 
+export const ModalActions = styled.div`
+  display: grid;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+`
+
 export const ModalTitle = styled.h3`
-  margin: 0;
+  margin: 0 auto;
   font-size: clamp(1.4rem, 2.2vw, 1.65rem);
   color: ${colors.primaryLight};
 `
 
 export const ModalText = styled.p`
   margin: 0;
+  text-align: center;
   line-height: 1.65;
   color: ${colors.textMuted};
-`
-
-export const ModalPrice = styled.div`
-  font-weight: 700;
-  color: ${colors.text};
-  font-size: 1.08rem;
-  margin-bottom: 2.5rem;
-
-  @media (max-width: 520px) {
-    margin-bottom: 0;
-  }
 `
 
 export const ModalCloseButton = styled.button`

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { bookSection, buildWhatsappUrl, contactInfo } from '../../../data/homeContent'
+import { bookSection, bookPurchaseLinks, buildWhatsappUrl, contactInfo } from '../../../data/homeContent'
 import { placeholderBookCover } from '../../../assets/placeholders'
 import { PrimaryButton } from '../../common/Buttons'
 import {
@@ -24,7 +24,7 @@ import {
   ModalBody,
   ModalTitle,
   ModalText,
-  ModalPrice,
+  ModalActions,
   ModalCloseButton,
 } from './styles'
 
@@ -34,11 +34,7 @@ const BookSection = () => {
   const modalInfo = {
     title: 'A Alma no Comando',
     summary: bookSection.paragraphs[0],
-    price: 'R$ 54,90',
-    actionLabel: 'Comprar agora',
   }
-
-  const whatsappUrl = buildWhatsappUrl(contactInfo.whatsappBookMessage)
 
   const handleOpenModal = () => setIsModalOpen(true)
   const handleCloseModal = () => setIsModalOpen(false)
@@ -103,10 +99,17 @@ const BookSection = () => {
               <ModalBody>
                 <ModalTitle id="book-modal-title">{modalInfo.title}</ModalTitle>
                 <ModalText>{modalInfo.summary}</ModalText>
-                <ModalPrice>{modalInfo.price}</ModalPrice>
-                <PrimaryButton as="a" href={whatsappUrl} target="_blank" rel="noreferrer">
-                  {modalInfo.actionLabel}
-                </PrimaryButton>
+                <ModalActions>
+                  <PrimaryButton as="a" href={bookPurchaseLinks.physical} target="_blank" rel="noreferrer">
+                    Comprar Livro Físico
+                  </PrimaryButton>
+                  <PrimaryButton as="a" href={bookPurchaseLinks.digital} target="_blank" rel="noreferrer">
+                    Comprar Livro Digital
+                  </PrimaryButton>
+                  <PrimaryButton as="a" href={buildWhatsappUrl(contactInfo.whatsappDefaultMessage)} target="_blank" rel="noreferrer">
+                    Entre em contato
+                  </PrimaryButton>
+                </ModalActions>
               </ModalBody>
             </ModalGrid>
           </ModalContent>

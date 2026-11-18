@@ -1,0 +1,179 @@
+- main [ref=f1e3]:
+  - generic [ref=f1e5]:
+    - generic [ref=f1e6]:
+      - generic [ref=f1e7]: Lançamento oficial
+      - heading "A Alma no Comando" [level=1] [ref=f1e8]
+      - paragraph [ref=f1e9]: Escutando a vida e sentindo as direções da alma.
+      - paragraph [ref=f1e10]: Um convite à reflexão, ao amadurecimento interior e à escuta profunda daquilo que a vida está tentando revelar em meio aos excessos, conflitos e transições do nosso tempo.
+    - generic [ref=f1e12]:
+      - img "Capa do livro A Alma no Comando" [ref=f1e13]
+      - generic [ref=f1e14]: Obra autoral
+    - generic [ref=f1e15]:
+      - button "Conheça a Obra" [ref=f1e16] [cursor=pointer]
+      - button "Conheça o Método" [ref=f1e17] [cursor=pointer]
+  - generic [ref=f1e19]:
+    - generic [ref=f1e20]:
+      - generic [ref=f1e21]: Contexto
+      - generic [ref=f1e22]:
+        - heading "O problema do mundo atual" [level=2] [ref=f1e23]
+        - paragraph [ref=f1e24]: "Vivemos em um tempo marcado por velocidade, excesso de estímulos e múltiplas exigências. Muitas pessoas seguem suas rotinas, cumprem responsabilidades e alcançam objetivos, mas carregam dentro de si uma sensação difícil de nomear: cansaço, inquietação ou perda de sentido."
+        - paragraph [ref=f1e25]: Em meio à hiperconectividade e à pressão constante por desempenho, a vida interior muitas vezes é silenciada. E, quando isso acontece, o sofrimento deixa de ser apenas um desconforto passageiro e passa a se manifestar como desconexão, vazio ou repetição de padrões.
+    - generic [ref=f1e26]:
+      - heading "Silêncio interior em tempos de excesso" [level=3] [ref=f1e28]
+      - paragraph [ref=f1e29]: Um painel simbólico sobre como a velocidade e a hiperconectividade podem obscurecer o espaço interno. O método propõe recuperar esse lugar de escuta e direção.
+      - generic [ref=f1e30]: Escuta, pausa e presença como antídotos ao ruído.
+  - generic [ref=f1e33]:
+    - generic [ref=f1e34]:
+      - generic [ref=f1e35]:
+        - generic [ref=f1e36]: Método
+        - heading "A Alma no Comando / Método João Lago" [level=2] [ref=f1e37]
+        - paragraph [ref=f1e38]: "A Alma no Comando nasce da reflexão sobre esse cenário contemporâneo e propõe uma pergunta essencial: o que a vida está tentando nos dizer?"
+        - paragraph [ref=f1e39]: Inspirado pela psicologia analítica e pela experiência de mais de duas décadas trabalhando com pessoas e organizações, João Lago apresenta uma visão profunda sobre os movimentos da vida humana. Em vez de buscar apenas equilíbrio ou soluções rápidas, o método convida à compreensão de crises, conflitos e transições como parte de um processo de transformação interior.
+      - generic [ref=f1e40]:
+        - heading "Uma visão que nasce da prática" [level=3] [ref=f1e41]
+        - paragraph [ref=f1e42]: Um método que alia psicologia analítica, leitura simbólica e experiência prática com pessoas e organizações. O convite é observar as crises como linguagem, não apenas como ruído.
+        - paragraph [ref=f1e44]: "A proposta é construir uma vida guiada pela alma: menos velocidade automática, mais consciência do que realmente pede passagem."
+    - button "Quero conhecer o método" [ref=f1e46] [cursor=pointer]
+  - generic [ref=f1e48]:
+    - generic [ref=f1e49]:
+      - generic [ref=f1e50]: Pilares
+      - heading "Os 4 pilares do método" [level=2] [ref=f1e51]
+    - generic [ref=f1e52]:
+      - article [ref=f1e53]:
+        - heading "A vida como símbolo" [level=3] [ref=f1e54]
+        - paragraph [ref=f1e55]:
+          - strong [ref=f1e56]: Os acontecimentos da vida
+          - text: não são apenas fatos isolados. Eles também podem ser lidos como sinais de processos internos em curso.
+      - article [ref=f1e57]:
+        - heading "O desequilíbrio como linguagem" [level=3] [ref=f1e58]
+        - paragraph [ref=f1e59]:
+          - strong [ref=f1e60]: Crises, tensões e desconfortos
+          - text: podem carregar mensagens importantes sobre aquilo que precisa ser revisto, integrado ou transformado.
+      - article [ref=f1e61]:
+        - heading "A escuta como prática" [level=3] [ref=f1e62]
+        - paragraph [ref=f1e63]:
+          - text: Permitir que a alma volte a ocupar seu lugar de orientação exige
+          - strong [ref=f1e64]: presença, percepção e abertura
+          - text: para o sentido mais profundo da experiência.
+      - article [ref=f1e65]:
+        - heading "A individuação como caminho" [level=3] [ref=f1e66]
+        - paragraph [ref=f1e67]:
+          - text: O amadurecimento humano exige escuta, consciência e coragem para se aproximar daquilo que é
+          - strong [ref=f1e68]: mais verdadeiro em si mesmo
+          - text: .
+    - button "Conhecer caminhos" [ref=f1e71] [cursor=pointer]
+  - generic [ref=f1e73]:
+    - generic [ref=f1e74]:
+      - generic [ref=f1e75]: Caminhos de aprofundamento
+      - heading "Formatos para caminhar mais fundo" [level=2] [ref=f1e76]
+      - paragraph [ref=f1e77]: O trabalho se desdobra em experiências sob medida para apoiar indivíduos, grupos e organizações em processos de reflexão, desenvolvimento e transformação.
+    - generic [ref=f1e78]:
+      - article [ref=f1e79]:
+        - heading "Mentoria" [level=3] [ref=f1e84]
+        - paragraph [ref=f1e85]:
+          - text: Acompanhamento para desenvolvimento de clareza, responsabilidade e direção nas
+          - strong [ref=f1e86]: escolhas pessoais e profissionais
+          - text: .
+      - article [ref=f1e87]:
+        - heading "Clínica (terapia)" [level=3] [ref=f1e92]
+        - paragraph [ref=f1e93]:
+          - text: Sessões individuais para aprofundar a
+          - strong [ref=f1e94]: escuta clínica
+          - text: ", integrar mensagens da psique e sustentar movimentos de transformação."
+      - article [ref=f1e95]:
+        - heading "Vivências" [level=3] [ref=f1e100]
+        - paragraph [ref=f1e101]:
+          - text: Experiências conduzidas para ampliar a percepção, aprofundar a escuta e favorecer movimentos de
+          - strong [ref=f1e102]: integração
+          - text: .
+      - article [ref=f1e103]:
+        - heading "Palestras e Programas" [level=3] [ref=f1e107]
+        - paragraph [ref=f1e108]:
+          - text: Conteúdos e experiências voltados ao
+          - strong [ref=f1e109]: desenvolvimento humano
+          - text: em contextos organizacionais, grupos e ambientes de formação.
+    - link "Quero saber mais sobre os serviços" [ref=f1e111] [cursor=pointer]:
+      - /url: https://wa.me/5511974753581?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20caminhos%20de%20aprofundamento.
+  - generic [ref=f1e113]:
+    - generic [ref=f1e114]:
+      - generic [ref=f1e115]: Obra
+      - heading "O livro" [level=2] [ref=f1e116]
+      - paragraph [ref=f1e117]: Ao percorrer temas como trabalho, relacionamentos, saúde emocional, família, dinheiro, lazer e espiritualidade, o livro propõe um olhar simbólico sobre a vida, mostrando que muitos dos desequilíbrios que enfrentamos carregam mensagens importantes sobre quem estamos nos tornando.
+      - paragraph [ref=f1e118]: Mais do que um manual de respostas, A Alma no Comando é um convite à reflexão. Um chamado para desenvolver uma escuta mais profunda da própria vida e reconhecer que o verdadeiro caminho de amadurecimento começa quando aprendemos a permitir que a alma volte a ocupar seu lugar de orientação.
+    - generic [ref=f1e119]:
+      - img "Capa do livro A Alma no Comando (placeholder)" [ref=f1e120]
+      - generic [ref=f1e121]: Edição especial
+    - button "Quero comprar o livro" [ref=f1e123] [cursor=pointer]
+  - generic [ref=f1e125]:
+    - generic [ref=f1e126]:
+      - generic [ref=f1e127]: Autor
+      - heading "Sobre João Lago" [level=2] [ref=f1e128]
+      - paragraph [ref=f1e129]: Com mais de duas décadas de experiência trabalhando com pessoas e organizações, João Lago desenvolveu uma abordagem que integra profundidade humana, escuta simbólica e reflexão sobre os movimentos da vida contemporânea.
+      - paragraph [ref=f1e130]: Seu trabalho propõe um olhar atento para os processos de transformação interior, ajudando indivíduos e grupos a compreenderem crises, transições e desafios como parte do amadurecimento humano.
+    - generic [ref=f1e131]:
+      - img "Retrato de João Lago (placeholder)" [ref=f1e133]
+      - generic [ref=f1e134]:
+        - heading "João Lago" [level=3] [ref=f1e135]
+        - text: Autor e facilitador
+      - paragraph [ref=f1e136]:
+        - strong [ref=f1e137]: Mais de vinte anos
+        - text: trabalhando com indivíduos, grupos e organizações para traduzir crises em caminhos de amadurecimento, com uma abordagem que une rigor, simbolismo e humanidade.
+  - generic [ref=f1e139]:
+    - generic [ref=f1e140]:
+      - generic [ref=f1e141]: Manifesto
+      - heading "Manifesto — convite final" [level=2] [ref=f1e142]
+      - paragraph [ref=f1e143]: Talvez a grande pergunta não seja apenas como viver melhor, mas como escutar com mais verdade aquilo que a vida pede de nós.
+      - paragraph [ref=f1e144]: A Alma no Comando é um convite para reencontrar sentido, profundidade e direção em meio ao ruído do mundo. Um chamado para perceber que a transformação não começa quando controlamos tudo, mas quando aprendemos a ouvir.
+    - generic [ref=f1e145]:
+      - heading "Um convite à presença" [level=3] [ref=f1e146]
+      - paragraph [ref=f1e147]:
+        - strong [ref=f1e148]: O silêncio interno
+        - text: não é ausência de movimento, é o espaço onde a direção aparece. Esta landing é apenas a porta de entrada para um percurso que continua no livro, nas vivências e no método.
+    - generic [ref=f1e149]:
+      - link "Entrar em contato" [ref=f1e150] [cursor=pointer]:
+        - /url: https://wa.me/5511974753581?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20formatos%20e%20pr%C3%B3ximos%20passos.
+      - button "Quero o livro" [ref=f1e151] [cursor=pointer]
+  - generic [ref=f1e153]:
+    - generic [ref=f1e155]:
+      - img "A Alma no Comando" [ref=f1e156]
+      - generic [ref=f1e157]:
+        - heading "A Alma no Comando" [level=3] [ref=f1e158]
+        - paragraph [ref=f1e159]: Um convite à escuta da vida, ao amadurecimento interior e à reconexão com aquilo que orienta com mais verdade.
+        - generic [ref=f1e160]:
+          - link "Instagram" [ref=f1e161] [cursor=pointer]:
+            - /url: https://www.instagram.com/aalmanocomando
+          - link "WhatsApp" [ref=f1e165] [cursor=pointer]:
+            - /url: https://wa.me/5511974753581?text=Ol%C3%A1!%20Quero%20falar%20sobre%20A%20Alma%20no%20Comando.
+          - link "E-mail" [ref=f1e169] [cursor=pointer]:
+            - /url: mailto:contato@aalmanocomando.com.br
+    - navigation "Navegação de rodapé" [ref=f1e173]:
+      - generic [ref=f1e174]: Navegação
+      - generic [ref=f1e175]:
+        - generic [ref=f1e176]:
+          - link "Início" [ref=f1e177] [cursor=pointer]:
+            - /url: "#hero"
+          - link "O problema" [ref=f1e178] [cursor=pointer]:
+            - /url: "#problem"
+          - link "Método" [ref=f1e179] [cursor=pointer]:
+            - /url: "#method"
+          - link "Pilares" [ref=f1e180] [cursor=pointer]:
+            - /url: "#pillars"
+        - generic [ref=f1e181]:
+          - link "Caminhos" [ref=f1e182] [cursor=pointer]:
+            - /url: "#paths"
+          - link "Livro" [ref=f1e183] [cursor=pointer]:
+            - /url: "#book"
+          - link "Autor" [ref=f1e184] [cursor=pointer]:
+            - /url: "#author"
+          - link "Manifesto" [ref=f1e185] [cursor=pointer]:
+            - /url: "#manifesto"
+    - generic [ref=f1e186]:
+      - generic [ref=f1e187]: Contato
+      - generic [ref=f1e188]:
+        - link "contato@aalmanocomando.com.br" [ref=f1e194] [cursor=pointer]:
+          - /url: mailto:contato@aalmanocomando.com.br
+        - link "+55 11 97475-3581" [ref=f1e200] [cursor=pointer]:
+          - /url: https://wa.me/5511974753581?text=Ol%C3%A1!%20Quero%20falar%20sobre%20A%20Alma%20no%20Comando.
+        - link "@aalmanocomando" [ref=f1e206] [cursor=pointer]:
+          - /url: https://www.instagram.com/aalmanocomando
+    - generic [ref=f1e207]: © 2026 A Alma no Comando. Todos os direitos reservados.
